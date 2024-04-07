@@ -5,13 +5,6 @@
 
 <?php
 
-	/**
-	 * @date    15/03/24
-	 * @author  Yevhen Kuropiatnyk
-	 * @email   evgeniy.kuropyatnik@gmail.com
-	 * @student sba23066
-	 */
-
 include_once('../config.php');
 include_once($app['base'] . 'connect_db.php');
 
