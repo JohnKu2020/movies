@@ -2,7 +2,7 @@
 <div style="margin-top: 50px; margin-bottom: 100px; padding: 20px; background: chartreuse;">
 <h1>Cookie Policy</h1>
 
-<p>This Cookie Policy explains how RE-MOVI, Inc. and its affiliates (collectively “RE-MOVI”, “we”, “us”, and “ours”), use cookies and similar technologies to recognize you when you visit our websites, including without limitation RE-MOVI  and any successor URLs, mobile or localized versions and related domains / sub-domains (“Websites”) and/or our mobile application (“App”) and / or our web platform (“Platform”). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+<p>This Cookie Policy explains how <?php echo $app['site_name']; ?>, Inc. and its affiliates (collectively “<?php echo $app['site_name']; ?>”, “we”, “us”, and “ours”), use cookies and similar technologies to recognize you when you visit our websites, including without limitation <?php echo $app['site_name']; ?> and any successor URLs, mobile or localized versions and related domains / sub-domains (“Websites”) and/or our mobile application (“App”) and / or our web platform (“Platform”). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
 
 <h4>What are cookies?</h4>
 <p>Cookies are text files containing small amounts of information which are downloaded to your computer or mobile device when you visit a website or mobile application. Cookies are then sent back to the originating site on each subsequent visit, or to another site that recognizes that cookies. You can find out more information about cookies at www.allaboutcookies.org.</p>
