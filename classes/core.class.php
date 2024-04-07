@@ -918,9 +918,6 @@ class Core {
 	}
 	
 
-	
-	// ====================================================== USER ===================================================
-	// ====================================================== USER ===================================================
 	// ====================================================== USER ===================================================
 
 	public function isUserExist($username){
@@ -1156,7 +1153,7 @@ class Core {
 	
 	public function only_AJAX(){
 		global $_SERVER;
-		if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') $this->log_and_die('Попытка прямого вызова!',0,'', __FUNCTION__." in ".__FILE__." at ".__LINE__);
+		if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') $this->log_and_die('Direct call detected!',0,'', __FUNCTION__." in ".__FILE__." at ".__LINE__);
 	}
 
 	public	function sanitize($string, $br = true, $strip = 0) {
