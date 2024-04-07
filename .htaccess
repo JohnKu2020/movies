@@ -1,0 +1,12 @@
+AddDefaultCharset UTF-8
+Options +FollowSymlinks
+Options -Indexes
+<FilesMatch "(?i)((\.tpl|.twig|\.ini|\.log|(?<!robots)\.txt))">
+ Require all denied
+</FilesMatch>
+RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^www.localhost/$ [NC]
+#RewriteRule ^(.*)$ localhost/$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]

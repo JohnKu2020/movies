@@ -1,0 +1,283 @@
+.w800 {
+    max-width: 800px; 
+    margin: auto;
+	/* background: white; */
+	margin-top: 40px;
+}
+.evkCarosel{
+    margin-bottom: 10px
+}
+.car_over{
+    background: black;
+    opacity: 0.7;
+    border-radius: 5px;
+    padding: 10px;
+}
+.evkSearch{
+    padding: 0px 5px 0px 5px;
+    margin:auto;
+}
+.validateerror{
+    color: red;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#filmscreen{
+    padding: 0px 5px 0px 5px;
+    margin:auto;
+	background: white;	
+}
+
+.evkFooter {
+    padding: 0px 5px 0px 5px;
+    margin:auto;    
+}
+
+.evkDesript{
+    padding: 10px;
+}
+
+.notfoundst{
+    margin: 50px 0px 50px;
+    text-align: center;
+}
+
+.search_block{
+	display: flex;
+}
+
+@media (max-width: 800px) {
+    .w800 { width: 100%; }
+	.search_block{ display: flex; }
+}
+
+.f80{
+    width: 90%;
+    margin: 20px 20px 20px 20px;
+}
+
+
+/* --------------------------------------------- */
+
+
+.site-header-bg{
+	background-color:transparent;
+	background-image:linear-gradient(180deg,#14181c 0,rgba(20,24,28,.945) 16.56%,rgba(20,24,28,.802) 30.85%,rgba(20,24,28,.606) 43.77%,rgba(20,24,28,.394) 56.23%,rgba(20,24,28,.198) 69.15%,rgba(20,24,28,.055) 83.44%,rgba(20,24,28,0));
+	background-repeat:repeat-x;
+	height:95px;
+	left:0;
+	opacity:.7;
+	position:absolute;
+	right:0;
+	top:0}
+.no-mobile .backdropped .site-header .site-header-bg{transition:opacity .4s cubic-bezier(.165,.84,.44,1)}.backdropped .site-header:hover .site-header-bg{opacity:.85}.site-header .site-logo{float:left;margin:22px 0 0;position:relative}
+
+
+.body_e {
+	background: #6c757d;
+	background-color:transparent;
+	background-image:linear-gradient(180deg,#14181c 0,rgba(20,24,28,.945) 16.56%,rgba(20,24,28,.802) 30.85%,rgba(20,24,28,.606) 43.77%,rgba(20,24,28,.394) 56.23%,rgba(20,24,28,.198) 69.15%,rgba(20,24,28,.055) 83.44%,rgba(20,24,28,0));
+	background-repeat:repeat-x;
+}
+.cont_3d2{
+	padding: 5px;
+	-webkit-box-shadow: 1px 7px 25px -10px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 1px 7px 25px -10px rgba(66, 68, 90, 1);
+	box-shadow: 1px 7px 25px -10px rgba(66, 68, 90, 1);
+}
+
+
+.container-top {
+    display: none;
+    position: fixed;
+    align-items: flex-end;
+    right: 20px;
+    bottom: 10px;
+    background: linear-gradient(green 100vh, red 0);
+    width: 50px;
+	-webkit-animation: fade-in 1s;
+    animation: fade-in 1s;	
+}
+
+	@keyframes fade-in {
+	  from {
+		opacity: 0;
+	  }
+	  to {
+		opacity: 1;
+	  }
+	}
+
+	@keyframes fade-out {
+	  from {
+		opacity: 1;
+	  }
+	  to {
+		opacity: 0;
+	  }
+	}
+
+.top {
+    position: absolute;
+    bottom: 20px;
+    margin-right: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+    background: #b5b5be;
+    border-radius: 10px;
+	border: solid #999;
+}
+.top:before {
+    content: "";
+    position: absolute;
+    inset: 30%;
+    transform: translateY(20%) rotate(-45deg);
+    border-top: 5px solid #fff;
+    border-right: 5px solid #fff;
+}
+
+
+.covers { overflow: hidden; margin: 0 auto; }
+.covers img { width: 100%; transition: 0.5s all ease-in-out; }
+.covers:hover img { transform: scale(1.5); }
+
+.mblur { -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: blur(3px); }
+
+
+
+/* --- Seats --- */
+
+	.movie_screen {
+		font-style: italic;
+		text-align: center;
+		width: 100%;
+		height: 40px;
+		margin-bottom: px;
+		align-content: center;
+		color: rgb(15, 15, 15);
+		font-weight: 600;
+		border: 1px #000 solid;
+	}
+
+   .seat-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin: 10px;
+    }
+    .row { display: flex; justify-content: center; }
+    .seat {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        background-color: #fff;
+        border: 1px solid #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+		border-radius: 2px;
+    }
+	.seat:hover {
+		border: 1px solid #fff;
+		opacity: 0.7;
+		background-color: #74e53d;
+		color:#fff;
+		border-radius: 3px;
+	}
+
+    .seat_ex {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        background-color: #ccc;
+        border: 1px solid #999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		border-radius: 2px;
+    }
+    
+	.sold{
+		background-color: #ccc!important;
+	}
+	.available{
+		background-color: #fff;
+	}
+	.selected{
+		background-color: #74e53d!important;
+	}
+	
+	
+	
+/* --- Admin tool buttons --- */
+
+.card .edit-tools { list-style: none; position: absolute; bottom: -14px; right: 2px; z-index: 100; }
+.card .edit-tools li { opacity: 0.5; left: 5%; }
+.card .edit-tools li:hover { opacity: 1; }
+.card .edit-tools button {
+	background: #f8f9fa;
+    border-radius: 10px;
+    /* box-shadow: #5E5DF0 0 10px 10px -1px; */
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+	border: 2px dotted #6c757d;
+}
+.card .edit-tools button.edit{
+	background-image: url('img/pngegg.png');
+    background-position: center; /* 0px 0px; */
+    background-repeat: no-repeat;
+    vertical-align: middle;	
+	background-size:30px;
+}
+
+
+	
+/* --- Tool tips  buttons --- */
+
+.tips { display: inline; position: relative; }
+.tips:hover:after {
+  background: #333;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 5px;
+  bottom: -38px;
+  color: #fff;
+  content: attr(data-tip);
+  left: 25%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 100px;
+}
+.tips:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 0 6px 6px 6px;
+  bottom: -4px;
+  content: "";
+  left: 50%;
+  position: absolute;
+  z-index: 99;
+}
+
+/* --- Loading --- */
+
+.fly { animation: MoveUpDown 1s linear infinite; position: absolute; left: 0; bottom: 0; z-index: 999999; max-width: 200px;}
+@keyframes MoveUpDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.centered { position: fixed; margin:0 auto; text-align: center; top: 40%; z-index: 9999; opacity: 1; display:none; }
+.plzWait{ position: relative; left: calc(50% - 50px); top:50%; }
+#overlay{ position: fixed; top:0px; left:0px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); opacity: .5; z-index: 1000; }
