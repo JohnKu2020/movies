@@ -1,5 +1,5 @@
 <?php 
-	//Access is prohibited for unauthorized users and non-administrators
+	//Access is prohibited for unauthorized users
 	if (!$core->isUserAuthorized() ) header('Location: main');
 
 	if (isset($_POST) && isset($_POST['user_id'])) {
