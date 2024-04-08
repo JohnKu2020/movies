@@ -34,6 +34,9 @@
 	$core->initRoutes();
 	if (isset($app['route']) && count($app['route'])!=0) {
 
+			$core->prepareTopMenu();
+			$core->SeoMetaSetTitle($core->getPageName());
+
 			switch ($app['page']) {
 				case 'movie':
 					if (isset($app['route'][$app['debug_index']+1])) {

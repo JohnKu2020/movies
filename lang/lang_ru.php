@@ -38,7 +38,6 @@ $_translations = [
 	'User with this username already exists' => 'Пользователь с таким именем уже существует',
 	'recaptcha is not valid' => 'Капча не верная',
 	'Book a Movies' => 'Забронировать фильм',
-
 	'In order to book a movie you should be a registered user' => 'Для бронирование нужно быть зарегистированным пользователем',
 	'or' => 'или',
 	'Enter Title' => 'Введите название',
@@ -81,6 +80,8 @@ $_translations = [
 	'This website uses cookies to give our users the best experience' =>'Это сайт использует печеньки, чтобы обеспечить удобную работу для вас',
 	'You can find out more by reading our' =>'Вы можете прочитать больше по ссылке',
 	'Access denied' => 'Доступ запрещен',
+	'Current bookings' => 'Все бронирования',
+	
 		
 ];
 

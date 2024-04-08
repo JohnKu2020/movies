@@ -14,6 +14,8 @@ class Core {
 	private $lang_id = 'en';
 	private $totalMoviesCount = 0;
 	private $_user;
+	private $_topmenu;
+	
 	public $_meta_data;
 	public $auth = false;
 		
@@ -154,8 +156,13 @@ class Core {
 
 	public function SeoMetaSetTitle($title) {
 		global $app;
-		$this->_meta_data['title'] = $title . '|' . $app['site_name'];
-		$this->_meta_data['og_site_name'] = $title;
+		if ($title=='') {
+			$all_title =  $app['site_name'];
+		} else {
+			$all_title =  $title . ' | ' . $app['site_name'];
+		}
+		$this->_meta_data['title'] = $all_title;
+		$this->_meta_data['og_site_name'] = $all_title;
 	}
 
 	// ============================================ Carousel =======================================
@@ -1327,13 +1334,25 @@ class Core {
 		if ($right == 'admin') { if (self::isAdmin()) { return true; } else { return false; } }
 	}
 	
+	public function getPageName(){
+		global $app;
+		
+		if (!isset($app['access_map'])) return '';
+		foreach($app['access_map'] as $key => $item) {
+			if ($item['page'] == $app['page']) return $item['name'];
+		}
+	}
+	
 	public function renderMenu($array){
-		global $_menu, $app;
-		$_mmenu ='';
-		$app['access_map'] = [];
+		return $this->_topmenu;
+	}
+
+	public function prepareTopMenu(){
+		global $app, $_menu;
 		$_menu = '';
-		$_mmenu.= $this->_constuct_menu($array['menu'], $array['style']);
-		return $_mmenu;
+		$app['access_map'] = [];
+		if (!isset($app['top_menu'])) return;
+		$this->_topmenu = self::_constuct_menu($app['top_menu']['menu'], $app['top_menu']['style']);
 	}
 
 	private function _constuct_menu($array, $arr_style){
@@ -1347,7 +1366,7 @@ class Core {
 					$app['access_map'][] = [
 						'page' => $_link,
 						'access' =>$item['access'],
-						'name' => $item['name']
+						'name' => __($item['name'])
 					];
 					if (self::checkUserAccess($item['access'])) {
 						$_icon =''; if (isset($item['icon']) && $item['icon'] != '') $_icon = '<i class="'.$item['icon'].'"></i> ';
