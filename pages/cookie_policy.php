@@ -1,4 +1,5 @@
-<?php include_once($app['base'] . 'pages/header.php'); ?>
+<?php 
+	include_once($app['base'] . 'pages/header.php'); ?>
 <div style="margin-top: 50px; margin-bottom: 100px; padding: 20px; background: chartreuse;">
 <h1>Cookie Policy</h1>
 

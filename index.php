@@ -53,16 +53,16 @@
 
 			// ============ ROUTES ====================
 			$routes_dyn = array (
-				// route, page to include, wrap to header and footer
-				array('search','pages/search.php',false),
-				array('register','pages/register.php',false),
-				array('login','pages/login.php',false),
-				array('logout','pages/logout.php',false),
-				array('activate','pages/activation.php',false),
+				// FORMAT: route, page to include, wrap to header and footer, title of page
+				//array('search','pages/search.php',false,__('Search')),
+				array('register','pages/register.php',false,__('Register')),
+				array('login','pages/login.php',false,__('Login')),
+				array('logout','pages/logout.php',false,__('Exit')),
+				array('activate','pages/activation.php',false,__('Activation')),
 				array('profile','pages/profile.php',true),
 				array('booking','pages/booking.php',true),
 				array('booking_history','pages/booking_history.php',true),
-				array('cookie','pages/cookie_policy.php', true),
+				array('cookie','pages/cookie_policy.php', true ,__('Cookie Policy')),
 				array('movie_form','pages/movie_form.php', true),
 				
 
@@ -70,6 +70,7 @@
 			for ($i = 0; $i < count($routes_dyn); $i++) { 
 				if ($routes_dyn[$i][0]==$app['page']) {
 					if(is_readable($routes_dyn[$i][1])) {
+						if (isset($routes_dyn[$i][3])) $core->SeoMetaSetTitle($routes_dyn[$i][3]);
 						if ($routes_dyn[$i][2]) include_once('pages/header.php');
 						include_once($app['base'] . $routes_dyn[$i][1]); 
 						if ($routes_dyn[$i][2]) include_once('pages/footer.php'); 
@@ -102,7 +103,7 @@
 	function page_not_found($page = ''){
 		global $app, $core;
 		$core->log_and_die('File not found',3,$app['route'],__FUNCTION__,false);
-		$core->_meta_data['title'] = $app['site_name'] . ' | 404 Not Found';
+		$core->_meta_data['title'] = '404 Not Found | ' . $app['site_name'];
 		header('HTTP/1.0 404 Not Found', true, 404);
 		if ($page=='') $page = 'pages/404.php';
 		include($app['base'] . 'pages/header.php');
